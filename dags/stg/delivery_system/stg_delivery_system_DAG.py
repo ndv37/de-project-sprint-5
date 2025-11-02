@@ -9,7 +9,7 @@ log = logging.getLogger(__name__)
 
 
 @dag(
-    dag_id='delivery_system_dag',
+    dag_id='stg_step8_delivery',
     schedule_interval='0/15 * * * *',  # Задаем расписание выполнения дага - каждый 15 минут.
     start_date=pendulum.datetime(2025, 3, 1, tz="UTC"),  # Дата начала выполнения дага. Можно поставить сегодня.
     catchup=False,  # Нужно ли запускать даг за предыдущие периоды (с start_date до сегодня) - False (не нужно).

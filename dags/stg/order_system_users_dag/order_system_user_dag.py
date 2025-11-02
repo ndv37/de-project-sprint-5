@@ -12,7 +12,7 @@ log = logging.getLogger(__name__)
 
 
 @dag(
-    dag_id='order_system_user_dag',
+    dag_id='stg_step7_order_users',
     schedule_interval='0/15 * * * *',
     start_date=pendulum.datetime(2022, 5, 5, tz="UTC"),
     catchup=False,

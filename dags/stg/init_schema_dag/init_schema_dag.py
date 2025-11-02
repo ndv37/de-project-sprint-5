@@ -10,6 +10,7 @@ log = logging.getLogger(__name__)
 
 
 @dag(
+    dag_id='stg_step1_init',
     schedule_interval='0/15 * * * *',  # Задаем расписание выполнения дага - каждый 15 минут.
     start_date=pendulum.datetime(2022, 5, 5, tz="UTC"),  # Дата начала выполнения дага. Можно поставить сегодня.
     catchup=False,  # Нужно ли запускать даг за предыдущие периоды (с start_date до сегодня) - False (не нужно).

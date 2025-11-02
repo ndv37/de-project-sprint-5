@@ -12,12 +12,16 @@ STG
  - deliverysystem_deliveries
 
  DDS
+ - dm_addresses
+ - dm_couriers
+ - dm_deliveries
+ - dm_delivery_timestamps
  - dm_orders
  - dm_products
  - dm_restaurants
+ - dm_timestamps
  - dm_users
  - fct_product_sales
- - srv_wv_settings
 
  CDM
  - 
