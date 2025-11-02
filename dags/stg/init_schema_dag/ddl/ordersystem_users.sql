@@ -5,3 +5,5 @@ CREATE TABLE if not exists stg.ordersystem_users
 	object_value text NOT NULL,
 	update_ts timestamp NOT null
 );
+
+ALTER TABLE stg.ordersystem_users ADD CONSTRAINT ordersystem_users_object_id_uindex UNIQUE (object_id);

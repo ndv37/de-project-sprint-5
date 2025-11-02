@@ -5,3 +5,6 @@ CREATE TABLE IF NOT EXISTS stg.bonussystem_events
 	event_type varchar NOT NULL,
 	event_value text NOT NULL
 );
+
+
+CREATE INDEX idx_bonussystem_events__event_ts ON stg.bonussystem_events USING btree (event_ts);

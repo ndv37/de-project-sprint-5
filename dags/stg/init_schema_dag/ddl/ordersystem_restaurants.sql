@@ -4,3 +4,5 @@ CREATE TABLE IF NOT EXISTS stg.ordersystem_restaurants (
     object_value text NOT NULL,
     update_ts timestamp NOT NULL
 );
+
+ALTER TABLE stg.ordersystem_restaurants ADD CONSTRAINT ordersystem_restaurants_object_id_uindex UNIQUE (object_id);
