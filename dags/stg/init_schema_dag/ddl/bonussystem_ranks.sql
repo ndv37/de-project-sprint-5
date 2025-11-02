@@ -4,3 +4,7 @@ CREATE TABLE IF NOT EXISTS stg.bonussystem_ranks (
     bonus_percent NUMERIC(19, 5) DEFAULT 0 NOT NULL CHECK (bonus_percent >= 0),
     min_payment_threshold NUMERIC(19, 5) DEFAULT 0 NOT NULL CHECK (min_payment_threshold >= 0)
 );
+
+
+
+
