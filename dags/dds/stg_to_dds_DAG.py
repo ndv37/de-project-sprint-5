@@ -18,7 +18,7 @@ log = logging.getLogger(__name__)
 
 
 @dag(
-    dag_id='stg_to_dds',
+    dag_id='stg_to_dds_',
     schedule_interval='0/15 * * * *',
     start_date=pendulum.datetime(2022, 5, 5, tz="UTC"),
     catchup=False,
