@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS stg.bonussystem_events
 );
 
 
-CREATE INDEX idx_bonussystem_events__event_ts ON stg.bonussystem_events USING btree (event_ts);
+--CREATE INDEX idx_bonussystem_events__event_ts ON stg.bonussystem_events USING btree (event_ts);
