@@ -6,19 +6,19 @@ from airflow.decorators import task
 #from config_const import ConfigConst
 from lib import ConnectionBuilder
 
-from examples.dds.dds_settings_repository import DdsEtlSettingsRepository
-from examples.dds.fct_products_loader import FctProductsLoader
-from examples.dds.order_loader import OrderLoader
-from examples.dds.products_loader import ProductLoader
-from examples.dds.restaurant_loader import RestaurantLoader
-from examples.dds.schema_ddl import SchemaDdl
-from examples.dds.timestamp_loader import TimestampLoader
-from examples.dds.user_loader import UserLoader
+from dds.dds_settings_repository import DdsEtlSettingsRepository
+from dds.fct_products_loader import FctProductsLoader
+from dds.order_loader import OrderLoader
+from dds.products_loader import ProductLoader
+from dds.restaurant_loader import RestaurantLoader
+from dds.schema_ddl import SchemaDdl
+from dds.timestamp_loader import TimestampLoader
+from dds.user_loader import UserLoader
 
 log = logging.getLogger(__name__)
 
 with DAG(
-    dag_id='sprint5_case_dds_snowflake_test_from_teacher',
+    dag_id='sprint5_project',
     schedule_interval='0/15 * * * *',
     start_date=pendulum.datetime(2022, 5, 5, tz="UTC"),
     catchup=False,

@@ -6,7 +6,7 @@ from psycopg import Connection
 from psycopg.rows import class_row
 from pydantic import BaseModel
 
-from examples.dds.dds_settings_repository import DdsEtlSettingsRepository, EtlSetting
+from dds.dds_settings_repository import DdsEtlSettingsRepository, EtlSetting
 
 
 class UserJsonObj(BaseModel):

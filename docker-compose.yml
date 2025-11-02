@@ -9,9 +9,10 @@ services:
       - 15432:5432
     volumes:
       - s5t4postgresql:/var/lib/postgresql
-      - ${AIRFLOW_DAGS_DIR:-./dags}:/lessons/dags
-    environment:
-      AIRFLOW_VAR_EXAMPLE_STG_DDL_FILES_PATH: "/lessons/dags/examples/stg/init_schema_dag/ddl"
+    #  - ${AIRFLOW_DAGS_DIR:-./dags}:/lessons/dags
+      - ./dags:/lessons/dags
+    #environment:
+    #  AIRFLOW_VAR_EXAMPLE_STG_DDL_FILES_PATH: "/lessons/dags/examples/stg/init_schema_dag/ddl"
     restart: unless-stopped
 
   metabase:
