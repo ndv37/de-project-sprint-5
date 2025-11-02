@@ -36,7 +36,7 @@ class DeliveriesStg:
                     d.object_value::json->>'rate' AS rate,
                     d.object_value::json->>'tip_sum' AS tip_sum
                 FROM stg.deliverysystem_deliveries d
-                INNER JOIN dds.dm_timestamps dt ON dt.ts = (d.object_value::json->>'delivery_ts')::timestamp
+                INNER JOIN dds.dm_timestamps dt ON dt.ts = cast(d.object_value::json->>'delivery_ts' as timestamp(0))
                 INNER JOIN dds.dm_addresses da ON da.address = d.object_value::json->>'address'
                 INNER JOIN dds.dm_couriers dc ON dc.courier_id = d.object_value::json->>'courier_id'
                 WHERE d.id > %(threshold)s --Пропускаем те объекты, которые уже загрузили.
